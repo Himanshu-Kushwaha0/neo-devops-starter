@@ -1,4 +1,6 @@
 import ImageUpload from "./ImageUpload";
 
-{/* inside the render */}
-<ImageUpload onExtract={(text) => appendMessage("user", text)} />
+// appendMessage(type, payload) is your existing function
+<ImageUpload
+  onContent={(payload) => appendMessage("ai-response", payload)}
+/>
